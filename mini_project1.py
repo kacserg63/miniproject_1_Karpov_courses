@@ -41,7 +41,7 @@ bron_month = bookings.query("is_canceled == 0") \
     
 print(bron_month)
 
-                    #Отмена бронирования отеля
+                    ##Отмена бронирования отеля
 bron_month_cancel = bookings.query("is_canceled == 1") \
     .groupby(['arrival_date_year', 'arrival_date_month'], as_index = False) \
     .agg({'is_canceled': 'count'}) \
